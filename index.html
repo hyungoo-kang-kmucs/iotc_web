@@ -9,35 +9,274 @@
         width: 500px;
     }
     #vds {
-        background: blue;
+        background: skyblue;
         width: 700px;
     }
     #mode {
         background: yellow;
     }
+    #newVds{
+        background: aqua;
+    }
 </style>
     <body>
         <div id="cnfckwndmlemd">
-            출차주의등<br/>
-            <img src="img/cnfckwndml.jpg" width="300"/>
+            출차주의등1
+            <br/><img src="img/cnfckwndml.jpg" width="300"/>
         </div>
         <div id="loopcoil">
-            루프코일<br/>
-            <img src="img/loopcoil2.jpg" width="300"/>
+            루프코일
+            <br/><img src="img/loopcoil2.jpg" width="300"/>
         </div>
         <br/>
+
+    
+        
+<!-- range slider css -->
+        <style>
+            .slidecontainer {
+                width: 100%;
+            }
+            
+            .slider {
+                -webkit-appearance: none;
+                width: 100%;
+                height: 15px;
+                border-radius: 5px;
+                background: #d3d3d3;
+                outline: none;
+                opacity: 0.7;
+                -webkit-transition: .2s;
+                transition: opacity .2s;
+            }
+            
+            .slider:hover {
+                opacity: 1;
+            }
+            
+            .slider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                background: #4CAF50;
+                cursor: pointer;
+            }
+            
+            .slider::-moz-range-thumb {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                background: #4CAF50;
+                cursor: pointer;
+            }
+        </style>
+
+<!-- radio button css -->
+    <style>
+        /* The container */
+        .container {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        /* Hide the browser's default radio button */
+        .container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        
+        /* Create a custom radio button */
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+            border-radius: 50%;
+        }
+        
+        /* On mouse-over, add a grey background color */
+        .container:hover input ~ .checkmark {
+            background-color: #ccc;
+        }
+        
+        /* When the radio button is checked, add a blue background */
+        .container input:checked ~ .checkmark {
+            background-color: #2196F3;
+        }
+        
+        /* Create the indicator (the dot/circle - hidden when not checked) */
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        
+        /* Show the indicator (dot/circle) when checked */
+        .container input:checked ~ .checkmark:after {
+            display: block;
+        }
+        
+        /* Style the indicator (dot/circle) */
+        .container .checkmark:after {
+             top: 9px;
+            left: 9px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: white;
+        }
+    </style>
+        <div id="newVds">
+            <h1>Vehicle Detector System</h1>
+            <div id="01_rudrhkdemd">
+                <h2>01_경광등</h2>
+                <br/>시간설정 : (범위)5초 ~ 60초
+                <div class="slidecontainer">
+                        <input type="range" min="5" max="60" value="30" class="slider" id="myRange">
+                        <p>경광등 시간(단위:초) : <span id="demo"></span></p>
+                </div>
+            </div>
+            <div id="02_rlsmdtjfwjd">
+                <h2>02_기능설정</h2>
+                <br/>MODE 설정 : (범위) MODE 0 ~ MODE 7
+                <div id="selectMode">
+                    <label class="container">MODE 0
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container">MODE 1
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container">MODE 2
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container">MODE 3
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container">MODE 4
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container">MODE 5
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container">MODE 6
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container">MODE 7
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                    </label>
+                </div>
+
+                <div id="mode">
+                    <div id="mode_00">
+                        MODE 0
+                        <br/>Count 0(개별 2회로)
+                    </div>
+                    <div id="mode_01">
+                        MODE 1
+                        <br/>Count 1. 8Sec Auto
+                    </div>
+                    <div id="mode_02">
+                        MODE 2
+                        <br/>Count 4. 8Sec Auto
+                    </div>
+                    <div id="mode_03">
+                        MODE 3
+                        <br/>Count 1. 20Sec Auto
+                    </div>
+                    <div id="mode_04">
+                        MODE 4
+                        <br/>Count 4. 20Sec Auto
+                    </div>
+                    <div id="mode_05">
+                        MODE 5
+                        <br/>User Mode
+                    </div>
+                    <div id="mode_06">
+                        MODE 6
+                        <br/>Counter Off(우선순위)
+                    </div>
+                    <div id="mode_07">
+                        MODE 7
+                        <br/>Count On(방향판별)
+                    </div>
+                </div>
+            </div>
+            <div id="03_rkaehwhwjd">
+                <h2>03_감도조정</h2>
+                <br/>감도 설정 : (범위) 0단계 ~ 9단계
+                <br/> 2단계(자전거 인식)
+                <br/> 5단계(중형차 인식)
+                <div class="slidecontainer">
+                    <input type="range" min="0" max="9" value="5" step="1" class="slider" id="myRange2">
+                    <p>감도 설정 : <span id="demo2"></span></p>
+                </div>
+            </div>
+            <div id="04_sorneh">
+                <h2>04_내구도</h2>
+                <br/>부품명/사용량/남은량/전체량/퍼센트/교체
+                <br/>루프코일1/1000/99000/100000/1.00
+                <br/>루프코일2/99000/1000/100000/99.00/Y
+            </div>
+        </div>
+<!-- 이부분은 range value값 나타내는 부분 -->
+        <script>
+            var slider = document.getElementById("myRange");
+            var output = document.getElementById("demo");
+            output.innerHTML = slider.value;
+        
+            slider.oninput = function() {
+            output.innerHTML = this.value;
+            }
+        </script>
+        <script>
+                var slider2 = document.getElementById("myRange2");
+                var output2 = document.getElementById("demo2");
+                output2.innerHTML = slider2.value;
+            
+                slider2.oninput = function() {
+                output2.innerHTML = this.value;
+                }
+            </script>
         <div id="vds">
             <img src="img/vds2.png" width="800"/>
             <img src="img/vds.jpg" width="400"/>
             <div id="a0">
-                    기기 구성도 및 기능설명
+                <h1>기기 구성도 및 기능설명</h1>
             </div>
             <div id="a1">
-                경광등 타임
+                <h2>경광등 타임</h2>
                 <br/>설정 스위치
             </div>
             <div id="a2">
-                기능설정 모드
+                <h2>기능설정 모드</h2>
                 <div id="mode">
                     <div id="mode_00">
                         MODE 0
@@ -74,7 +313,7 @@
                 </div>
             </div>
             <div id="a3">
-                입차, 출차 검지기
+                <h2>입차, 출차 검지기</h2>
                 <br/>감도 조정 스위치
                 <br/> 0(낮음) - 9(높음)
                 <br/> 출고시 5번에 셋팅
