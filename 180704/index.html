@@ -1,0 +1,565 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>VEHICLE DETECTOR SYSTEM</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+
+<script>
+	function loadCSS(path) {
+		var elem = document.createElement('link');
+		var head = document.getElementsByTagName('head')[0];
+		elem.rel = 'stylesheet';
+		elem.href = path;
+		elem.media = 'only x';
+		head.appendChild(elem); setTimeout(function () { elem.media = 'all'; }); } loadCSS('dist/rangeslider.css');
+</script>
+
+<body class="landing is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="index.html">Vehicle Detector System</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="#one" class="more scrolly">1. 실시간 센서 감지 시스템</a></li>
+											<li><a href="#one_2" class="more scrolly">2. 경광등 시간 설정</a></li>
+											<li><a href="#one_3" class="more scrolly">3. 모드 설정</a></li>
+											<li><a href="#one_4" class="more scrolly">4. 감도 조정</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<h2>Vehicle Detector System</h2>
+							<p>어서오세요.<br />
+							당신을 위한 차량검지기 시스템<br />
+							crafted by <a href="#">IOTC</a>.</p>
+							<ul class="actions special">
+								<li><a href="#" class="button primary">Activate</a></li>
+							</ul>
+						</div>
+						<a href="#one" class="more scrolly">Settings</a>
+					</section>
+<style>
+	#one_2{
+		background:#2e3842;
+	}
+	#one_3{
+		background:#505393;
+	}
+	#one_4{
+		background:#2e3842;
+	}
+</style>
+
+<style>
+
+	.chName {
+		background: yellowgreen;
+	}
+	.prgBar{
+		background: blue;
+	}
+	.chFig{
+		background: yellow;
+	}
+
+	.entireChHorizontal .chName {
+		position: absolute;
+		left:0%; top:0%;
+		width: 30%; height:100%;
+	}
+
+	.entireChHorizontal .prgBar {
+		position: absolute;
+		left:30%; top:0%;
+		width: 40%; height:100%;
+	}
+	.entireChHorizontal .chFig {
+		position: absolute;
+		left:70%; top:0%;
+		width: 30%; height:100%;
+	}
+
+	#one .entireChVertical .chStat {
+		position: absolute;
+		left:0%; top:0%;
+		width: 100%; height:40%;
+	}
+	#one .entireChVertical .chName {
+		position: absolute;
+		left:0%; top:40%;
+		width: 100%; height:10%;
+	}
+
+	#one .entireChVertical .prgBar {
+		position: absolute;
+		left:0%; top:50%;
+		width: 100%; height:40%;
+	}
+	#one .entireChVertical .chFig {
+		position: absolute;
+		left:0%; top:90%;
+		width: 100%; height:10%;
+	}
+
+
+
+
+	.entireChVertical .chName {
+		position: absolute;
+		left:0%; top:0%;
+		width: 100%; height:30%;
+	}
+
+	.entireChVertical .prgBar {
+		position: absolute;
+		left:0%; top:30%;
+		width: 100%; height:40%;
+	}
+	.entireChVertical .chFig {
+		position: absolute;
+		left:0%; top:70%;
+		width: 100%; height:30%;
+	}
+
+	#one_3 .entireChVertical #one_3_details {
+		background: white;
+		position: absolute;
+		top: 0%; left: 25%;
+		width: 50%; height:100%;
+	}
+	#one_3 .entireChVertical .ch1{
+		background: red;
+		position: absolute;
+		top: 0%; left:0%;
+		width: 25%; height: 100%;
+	}
+
+	#one_3 .entireChVertical .ch2{
+		background:green;
+		position: absolute;
+		top: 0%; left:75%;
+		width: 25%; height: 100%;
+	}
+
+	.entireChVertical {
+		/* background: yellow; */
+		position: relative;
+		width:100%; height: 300px;
+	}
+	.entireChVertical .ch1{
+		background: red;
+		position: absolute;
+		top: 0%; 
+		width: 50%; height: 100%;
+	}
+	.entireChVertical .ch2{
+		background:green;
+		position: absolute;
+		top: 0%; left:50%;
+		width:50%; height: 100%;
+	}
+
+	.entireChHorizontal {
+		/* background: yellow; */
+		position: relative;
+		width:100%; height: 300px;
+	}
+
+	.entireChHorizontal .ch1{
+		background: red;
+		position: absolute;
+		top: 0%; 
+		width: 100%; height: 50%;
+	}
+
+	.entireChHorizontal .ch2{
+		background:green;
+		position: absolute;
+		top: 50%;
+		width: 100%; height: 50%;
+	}
+</style>
+
+				<!-- One -->
+					<section id="one" class="wrapper style1 special">
+						<div class="inner">
+							<header class="major">
+								<h2>실시간 센서 감지 시스템</h2>
+								<div class="entireChVertical">
+									<div class="ch1">
+										<div class="chStat">
+											<img src="images/siren_off.svg" width="100">
+										</div>
+										<div class="chName">
+											채널 1
+										</div>
+										<div class="prgBar">
+											<input type="range" min="10" max="11" step="0.1" value="10.2" data-rangeslider data-orientation="vertical">
+											<output></output>
+										</div>
+										<div class="chFig">
+											62
+										</div>
+									</div>
+									<div class="ch2">
+										<div class="chStat">
+											<img src="images/siren.svg" width="100">
+										</div>
+										<div class="chName">
+											채널 2
+										</div>
+										<div class="prgBar">
+											<input type="range" min="10" max="11" step="0.1" value="10.2" data-rangeslider data-orientation="vertical">
+											<output></output>
+										</div>
+										<div class="chFig">
+											85
+										</div>
+									</div>
+								</div>
+							</header>
+							
+						</div>
+					</section>
+
+					<!-- One_2 -->
+					<section id="one_2" class="wrapper style1 special">
+						<div class="inner">
+							<header class="major">
+								<p><img src="images/siren.svg" width="150"></p>
+								<h2>경광등 시간 설정</h2>
+								<div class="entireChHorizontal">
+									<div class="ch1">
+										<div class="chName">
+											채널 1
+										</div>
+										<div class="prgBar">
+											<input type="range" min="0" max="100" step="1" value="45" data-rangeslider>
+											<output></output>
+										</div>
+										<div class="chFig">
+											45
+										</div>
+									</div>
+									<div class="ch2">
+										<div class="chName">
+											채널 2
+										</div>
+										<div class="prgBar">
+												<input type="range" min="0" max="100" step="1" value="65" data-rangeslider>
+												<output></output>										
+										</div>
+										<div class="chFig">
+											65
+										</div>
+									</div>
+								</div>
+							</header>
+						</div>
+					</section>
+
+<style>
+	#one_3_details #m0 {
+		background: red;
+		position: absolute;
+		left:0%; top:0%;
+		width:100%; height:12.5%;
+	}
+
+	#one_3_details #m1 {
+		background: green;
+		position: absolute;
+		left:0%; top:12.5%;
+		width:100%; height:12.5%;
+	}
+	#one_3_details #m2 {
+		background: red;
+		position: absolute;
+		left:0%; top:25%;
+		width:100%; height:12.5%;
+	}
+
+	#one_3_details #m3 {
+		background: green;
+		position: absolute;
+		left:0%; top:37.5%;
+		width:100%; height:12.5%;
+	}
+
+	#one_3_details #m4 {
+		background: red;
+		position: absolute;
+		left:0%; top:50%;
+		width:100%; height:12.5%;
+	}
+
+	#one_3_details #m5 {
+		background: green;
+		position: absolute;
+		left:0%; top:62.5%;
+		width:100%; height:12.5%;
+	}
+	#one_3_details #m6 {
+		background: red;
+		position: absolute;
+		left:0%; top:75%;
+		width:100%; height:12.5%;
+	}
+
+	#one_3_details #m7 {
+		background: green;
+		position: absolute;
+		left:0%; top:87.5%;
+		width:100%; height:12.5%;
+	}
+
+	#one_3_details .mName {
+		background: white;
+		position: absolute;
+		width: 30%;
+		left:0%;
+	}
+
+	#one_3_details .mDetail{
+		/* background: green; */
+		position: absolute;
+		width: 70%;
+		left: 30%;
+	}
+</style>
+					<!-- One_3 -->
+					<section id="one_3" class="wrapper style1 special">
+						<div class="inner">
+							<header class="major">
+								<p><img src="images/settings.svg" width="200"></p>
+								<h2>모드 설정</h2>
+								<div class="entireChVertical">
+									<div id="one_3_details">
+										<div id="m0" class="m">
+											<div class="mName">
+												Mode 0
+											</div>
+											<div class="mDetail">
+												Count 0 (개별 2회로)
+											</div>
+										</div>
+										<div id="m1" class="m">
+											<div class="mName">
+												Mode 1
+											</div>
+											<div class="mDetail">
+												Count 1, 8 sec Auto
+											</div>
+										</div>
+										<div id="m2" class="m">
+											<div class="mName">
+												Mode 2
+											</div>
+											<div class="mDetail">
+												Count 4, 8 sec Auto
+											</div>
+										</div>
+										<div id="m3" class="m">
+											<div class="mName">
+												Mode 3
+											</div>
+											<div class="mDetail">
+												Count 1, 20sec Auto
+											</div>
+										</div>
+										<div id="m4" class="m">
+											<div class="mName">
+												Mode 4
+											</div>
+											<div class="mDetail">
+												Count 4, 20sec Auto
+											</div>
+										</div>
+										<div id="m5" class="m">
+											<div class="mName">
+												Mode 5
+											</div>
+											<div class="mDetail">
+												User Mode
+											</div>
+										</div>
+										<div id="m6" class="m">
+											<div class="mName">
+												Mode 6
+											</div>
+											<div class="mDetail">
+												Counter Off (우선순위)
+											</div>
+										</div>
+										<div id="m7" class="m">
+											<div class="mName">
+												Mode 7
+											</div>
+											<div class="mDetail">
+												Counter On (방향판별)
+											</div>
+										</div>
+									</div>
+									<div class="ch1">
+										<div class="chName">
+											채널 1
+										</div>
+										<div class="prgBar">
+											<input type="range" min="0" max="7" step="1" value="4" data-rangeslider data-orientation="vertical">
+											<output></output>
+										</div>
+										<div class="chFig">
+											4
+										</div>
+									</div>
+									
+									<div class="ch2">
+										<div class="chName">
+											채널 2
+										</div>
+										<div class="prgBar">
+											<input type="range" min="0" max="7" step="1" value="1" data-rangeslider data-orientation="vertical">
+											<output></output>
+										</div>
+										<div class="chFig">
+											1
+										</div>
+									</div>
+								</div>
+								
+							</header>
+						</div>
+					</section>
+
+					<!-- One_4 -->
+					<section id="one_4" class="wrapper style1 special">
+						<div class="inner">
+							<header class="major">
+								<p><img src="images/detector.svg" width="200"></p>
+								<h2>감도 조정</h2>
+								<div class="entireChHorizontal">
+									<div class="ch1">
+										<div class="chName">
+											채널 1
+										</div>
+										<div class="prgBar">
+													<input type="range" name="rkaeh1" min="0" max="100" step="1" value="65" data-rangeslider>
+													<p id="aaa"></p>
+													<output></output>
+										</div>
+										<script>
+											var xx = rkaeh1 + rkaeh2;
+											document.getElementById("aaa").innerHTML += xx; 
+										</script>
+										<div class="chFig">
+											65
+										</div>			
+									</div>
+									<div class="ch2">
+										<div class="chName">
+											채널 2
+										</div>
+										<div class="prgBar">
+											<input type="range" name="rkaeh2" min="0" max="100" step="1" value="95" data-rangeslider>
+											<output></output>
+										</div>
+										<div class="chFig">
+											95
+										</div>
+									</div>
+								</div>
+							</header>
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>Vehicle Detector System</li><li>Developed: <a href="#">IOTC</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+</body>
+
+<script src="dist/jquery.min.js"></script>
+<script src="dist/rangeslider.js"></script>
+<script>
+	$(function() {
+		var $document = $(document);
+		var selector = '[data-rangeslider]';
+		var $inputRange = $(selector);
+		/** * Example functionality to demonstrate a value feedback * and change the output's value. */
+		function valueOutput(element) {
+			var value = element.value;
+			var output = element.parentNode.getElementsByTagName('output')[0];
+			output.innerHTML = value;
+		} /** * Initial value output */
+
+		for (var i = $inputRange.length - 1; i >= 0; i--) {
+			valueOutput($inputRange[i]);
+		}; /** * Update value output */
+		
+		$document.on('input', selector, function(e) {
+				valueOutput(e.target); }); /** * Initialize the elements */
+				
+		$inputRange.rangeslider({ polyfill: false }); /** * Example functionality to demonstrate programmatic value changes */
+		$document.on('click', '#js-example-change-value button', function(e) {
+			var $inputRange = $('[data-rangeslider]', e.target.parentNode);
+			var value = $('input[type="number"]', e.target.parentNode)[0].value;
+			$inputRange .val(value) .change();
+			}); /** * Example functionality to demonstrate programmatic attribute changes */
+			
+		$document.on('click', '#js-example-change-attributes button', function(e) {
+			var $inputRange = $('[data-rangeslider]', e.target.parentNode);
+			var attributes = { min: $('input[name="min"]', e.target.parentNode)[0].value, max: $('input[name="max"]', e.target.parentNode)[0].value, step: $('input[name="step"]', e.target.parentNode)[0].value };
+			$inputRange .attr(attributes) .rangeslider('update', true);
+			}); /** * Example functionality to demonstrate destroy functionality */
+			
+		$document .on('click', '#js-example-destroy button[data-behaviour="destroy"]', function(e) {
+			$('input[type="range"]', e.target.parentNode).rangeslider('destroy');
+			}) .on('click', '#js-example-destroy button[data-behaviour="initialize"]', function(e) {
+				$('input[type="range"]', e.target.parentNode).rangeslider({ polyfill: false });
+				});
+				}); (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-39140220-2'); ga('send', 'pageview'); (function() { var weekday = function() { var dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], now = new Date(); return dayNames[now.getDay()]; }; console && console.log('%crangeslider.js\n%cSimple, small and fast JavaScript/jQuery polyfill\nfor the HTML5 <input type=\"range\"> slider element. \n\nThanks for taking a look :)\nIt\'s always nice to see you.\nHave a nice '+ weekday() +'!\n\n<3\n\nAndré', 'font-size:2em;color:#00ff00;', 'color:#404040;font-size:1em;'); })(); ((window.gitter = {}).chat = {}).options = { room: 'dist/rangeslider.js' };
+</script>
+
+</html>
